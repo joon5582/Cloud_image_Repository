@@ -58,11 +58,89 @@ a{
   transform: translateY(50%);
   display: flex;
   justify-content: center;
-  
 }
 .btnmargin{
   margin-right: 10px;
   margin-left: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 0px) and (max-width: 450px) {
+
+  .delete-form{
+    height: 50%;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnmargin{
+    height: 100%;
+    width: 30%;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    
+  }
+ .button-text{
+   height: 60%;
+   font-size: 30%;
+   vertical-align: text-top;
+ }
+}
+@media (min-width: 450px) and (max-width: 660px) {
+
+  .delete-form{
+    height: 50%;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnmargin{
+    height: 100%;
+    width: 30%;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    
+  }
+ .button-text{
+   height: 60%;
+   font-size: 40%;
+   vertical-align: text-top;
+ }
+}
+
+@media (min-width: 660px) and (max-width: 1200px) {
+
+  .delete-form{
+    height: 50%;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnmargin{
+    height: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    
+  }
+ .button-text{
+   height: 100%;
+   font-size: 60%;
+   vertical-align: text-top;
+ }
 }
 .imgbuttons{
   margin-left: 10px;

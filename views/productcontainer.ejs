@@ -16,16 +16,16 @@
                 <img class="thumbnail" src="<%=product.dataUrl%>">
             
                 <%} else { %>
-                    <p class="image-notfound">Image Deleted from server!</p>
+                    <p class="image-notfound">Deleted</p>
                 <%}%>
             
             <div class="button-box2">
                 <form class="delete-form" action="products/deleteproduct" method="POST">
                     
                     <button type="button" data-toggle="modal" data-target="#<%=product.id%>"
-                        class="btn btn-primary btnmargin">View</button>
+                        class="btn btn-primary btnmargin"><span class="button-text">View</span></button>
                     <button type="submit" onclick="return confirm('Are you sure to delete?')"
-                        class="btn btn-secondary btnmargin">Detete</button>
+                        class="btn btn-secondary btnmargin"><span class="button-text">Detete</span></button>
                     <input type="hidden" name="imgurl" value="<%=product.filepath%>">
                 </form>
             </div>

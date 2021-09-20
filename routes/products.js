@@ -49,7 +49,7 @@ router.get('/', isLoggedin, async function (req, res, next) {
 });
 
 router.post('/addproduct', upload.array('image'),isLoggedin, async function (req, res, next) {
-  console.log(req.file);
+  
   for (let i = 0; i < req.files.length; i++) {
     var product = new Product({ imgurl: req.files[i].path, userid:req.user.id});
     await product.save();
