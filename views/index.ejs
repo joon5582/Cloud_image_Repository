@@ -1,0 +1,24 @@
+<% if (typeof username !='undefined' ) { %>
+    <div class="navbar">
+        <div></div>
+        <div class="navi-home">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div id="index-container">
+        <h1>Here is your private image cloud !</h1><br><br>
+        <button type="button" class="btn btn-success" onclick="window.location.href='/products'"><%=username.name%>'s CLOUD</button>
+    </div>
+
+    <%} else { %>
+        <div class="navbar">
+            <div></div>
+            <div class="navi-home">
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            </div>
+        </div>
+        <div id="index-container">
+            <h1>Welcome to Junu's Cloud Storage!</h1>
+        </div>
+    <%}%>

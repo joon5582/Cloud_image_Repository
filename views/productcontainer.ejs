@@ -1,0 +1,63 @@
+<div class="navbar">
+    <form action="products/addproduct" method="POST"  enctype="multipart/form-data">
+        <input id="file-input" accept="image/*" onchange="this.form.submit()" name="image" type="file" multiple hidden>
+        <button type="button" id="upload-button" class="btn btn-success">ADD IMAGE</button>
+    </form>
+    <div class="navi">
+        <a href="/">Home</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div id="product-container">
+    <% products.forEach((product)=> { %>
+        <div class="box">
+            <img class="thumbnail" src="<%=product.dataUrl%>">
+            <div class="button-box2">
+                <form class="delete-form" action="products/deleteproduct" method="POST">
+                    
+                    <button type="button" data-toggle="modal" data-target="#<%=product.id%>"
+                        class="btn btn-primary btnmargin">View</button>
+                    <button type="submit" onclick="return confirm('Are you sure to delete?')"
+                        class="btn btn-secondary btnmargin">Detete</button>
+                    <input type="hidden" name="imgurl" value="<%=product.filepath%>">
+                </form>
+            </div>
+        </div>
+        <div class="modal fade" id="<%=product.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="img-fluid" src="<%=product.dataUrl%>">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+
+</div>
+
+
+<script type="text/javascript">
+    function popupview(url) {
+        var img = new Image();
+        img.src = url;
+        var img_width = img.width;
+        var win_width = img.width + 25;
+        var height = img.height + 30;
+        var OpenWindow = window.open('', '_blank', 'width=' + img_width + ', height=' + height + ', menubars=no, scrollbars=auto');
+        OpenWindow.document.write("<img src='" + url + "' width='" + win_width + "'>");
+    };
+
+    document.getElementById('upload-button').addEventListener('click', uploadWindow);
+
+    function uploadWindow() {
+        document.getElementById('file-input').click();
+    }
+</script>

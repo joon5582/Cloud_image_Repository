@@ -1,0 +1,84 @@
+a{
+  margin:10px;
+}
+#product-container{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.box {
+  position: relative;
+  width: 22%;
+  height: 0;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  margin: 15px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.thumbnail{
+  position: relative;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.button-box2{
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+}
+
+.delete-form{
+  height: 50%;
+  transform: translateY(50%);
+  display: flex;
+  justify-content: center;
+  
+}
+.btnmargin{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.imgbuttons{
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 60%;
+  width: 25%;
+  transform: translateY(50%);
+}
+
+.box:hover .button-box2{
+  opacity: 1;
+}
+
+.box:hover img{
+  opacity: 0.3;
+}
+
+#index-container, #register-container, #login-container{
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width:45%;
+  text-align: center;
+}
+
+
