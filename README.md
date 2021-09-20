@@ -1,3 +1,4 @@
+### https://polar-stream-40120.herokuapp.com here is actual running server of this code now!
 # Cloud image Repository
 ## For Shopify_Challenge
 
@@ -20,4 +21,6 @@
 >>##### b. Without using cloud storage like AWS S3, I implemented backend server to store all uploaded image files on local server. This doesn't mean that users are to share static files(public), but I stored them in normal server side folder, so users can't access to them directly. And when the server have to render images, it converts them into dataurl using base64 encoding and links them with image tag of html so that user can see them. This is so complicated structure but I think it's almost the best practice for implementing this project. 
 >>##### c. Used resources of bootstrap for better design
    
+   
+
 
