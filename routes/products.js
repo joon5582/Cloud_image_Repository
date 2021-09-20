@@ -20,7 +20,12 @@ var upload = multer({ storage: storage });
 
 function createDataUrl(filepath) {
   // read binary data
-  var bitmap = fs.readFileSync(filepath);
+  try{
+    var bitmap = fs.readFileSync(filepath);
+  }
+  catch{
+    return null;
+  }
   // create img data url
   var ext = filepath.split('.').pop();
   return 'data:image/'+ext+';base64,'+bitmap.toString('base64');
@@ -28,6 +33,7 @@ function createDataUrl(filepath) {
 
 router.get('/', isLoggedin, async function (req, res, next) {
   const products = await Product.find({userid:req.user.id})
+  
   var clientProducts = [];
   var count=0;
   products.forEach((product)=>{

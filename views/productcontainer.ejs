@@ -12,7 +12,13 @@
 <div id="product-container">
     <% products.forEach((product)=> { %>
         <div class="box">
-            <img class="thumbnail" src="<%=product.dataUrl%>">
+            <% if (product.dataUrl) { %>
+                <img class="thumbnail" src="<%=product.dataUrl%>">
+            
+                <%} else { %>
+                    <p class="image-notfound">Image Deleted from server!</p>
+                <%}%>
+            
             <div class="button-box2">
                 <form class="delete-form" action="products/deleteproduct" method="POST">
                     
