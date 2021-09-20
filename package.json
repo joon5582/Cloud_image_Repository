@@ -1,7 +1,7 @@
 {
   "name": "juncloud",
   "version": "1.0.0",
-  "description": "",
+  "description": ">### How to use\r >#### 1. in .env, set DB_CONNECTION=(your MongoDB connection string)\r >#### 2. in .env, set SESSION_SECRET=(any secret string you can create)\r >#### 3. type 'npm install' on terminal\r >#### 4. run with 'npm start'\r >#### 5. default port number is 8080, so after start, go to 'http://localhost:8080/'\r --------------------------",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,5 +28,14 @@
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "sqlite3": "^5.0.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joon5582/Cloud_image_Repository.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joon5582/Cloud_image_Repository/issues"
+  },
+  "homepage": "https://github.com/joon5582/Cloud_image_Repository#readme"
 }
